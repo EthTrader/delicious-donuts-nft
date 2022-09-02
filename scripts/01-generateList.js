@@ -38,7 +38,7 @@ async function generateList() {
     console.log("Total NFTs to Mint: ", totalNFTs);
     console.log("Total Users Receiving NFTs: ", userCount);
 
-    await fsPromises.writeFile('json/output-nft-list.json', JSON.stringify(nftList));
+    await fsPromises.writeFile('../json/01-output-nft-list.json', JSON.stringify(nftList));
 
 }
 
