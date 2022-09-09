@@ -1,8 +1,6 @@
 const addressDonutList = require("../json/02-output-address-donut-list.json");
 const privateKeyJSON = require("../secrets/privateKey.json");
-const nftStorageAPIKeyJSON = require("../secrets/nftStorage.json");
 const nftContractABI = require("../abi/abi.json");
-const axios = require("axios");
 
 async function mint() {
 
@@ -16,7 +14,7 @@ async function mint() {
         let wallet = new ethers.Wallet(privateKey, provider);
 
         // Create contract instance
-        let nftContractAddress = "0x95Ff6c96De46bFb9a385Ec2e0828F96096EAd507";
+        let nftContractAddress = "0xb5C6178AB6288BeaB6FCE80b44786D647E8A7a82";
         let nftContract = new ethers.Contract(nftContractAddress, nftContractABI, wallet);
 
         // Get token URI
@@ -41,45 +39,45 @@ async function mint() {
 async function getTokenURI(deliciousDonutId) {
     switch (deliciousDonutId) {
         case 1:
-            return "";
+            return "https://bafkreifnpu5iqlut5imobxzvvjyu2udiywflbo5sg2b6ifpp3mqnrf6zli.ipfs.nftstorage.link/";
         case 2:
-            return "";
+            return "https://bafkreiftcttcv7en44y5qjyzb3b22yfaetdfrw47p2bzpxnyawcyr4f3c4.ipfs.nftstorage.link/";
         case 3:
-            return "";
+            return "https://bafkreic27uaw3typj2eytetdpbsrdtn64cbxwvd6zqfk7tqhir7y5pnqam.ipfs.nftstorage.link/";
         case 4:
-            return "";
+            return "https://bafkreie6fdmjlbjd6xeplhelwyiiouwkz7rbczczocmv7ebx3l6gzjhwn4.ipfs.nftstorage.link/";
         case 5:
-            return "";
+            return "https://bafkreihjcyyadevsiupajijuab5nymssbvfkv6p35wssbidhhajsatnh4q.ipfs.nftstorage.link/";
         case 6:
-            return "";
+            return "https://bafkreiad3hfczfcitzetpoakktsdkpsvioe32ylbzcfujwuzlftgxnqdyq.ipfs.nftstorage.link/";
         case 7:
-            return "";
+            return "https://bafkreiav5pyg7aqk6u7pmtn5porq5neqjsj76bxqp5dysds3dn5ji2ceba.ipfs.nftstorage.link/";
         case 8:
-            return "";
+            return "https://bafkreibqfsdefqfidie62xi3ppawxo7a3ja3bpltp5plxjdtejikbkbb4y.ipfs.nftstorage.link/";
         case 9:
-            return "";
+            return "https://bafkreif7v5c7bc6bqqoqrcmdv4zdxouu2rfgindwlitzsxl5tuafe2y4y4.ipfs.nftstorage.link/";
         case 10:
-            return "";
+            return "https://bafkreihtacrnzjk5au2iqv7w6tify5ii6bwwqmrzcwyphjddlzcezhfbee.ipfs.nftstorage.link/";
         case 11:
-            return "";
+            return "https://bafkreih6oh2zxefn4jdtb53otmk6ljcspbbbovrmc767hvmcprwsocnvmy.ipfs.nftstorage.link/";
         case 12:
-            return "";
+            return "https://bafkreidz4l6ijqxxax7zi6lstatjhipsqvcnfwod3grp6tpwxu2hpmwrha.ipfs.nftstorage.link/";
         case 13:
-            return "";
+            return "https://bafkreibshtqu6gkigx6yxm4vig2pmeckha5ckchybrsvqsbuvbzqdwfxgu.ipfs.nftstorage.link/";
         case 14:
-            return "";
+            return "https://bafkreifxcbwwuulzbjyfk2czv5cmx2kwybieafzctm3e7we5usrpvciouy.ipfs.nftstorage.link/";
         case 15:
-            return "";
+            return "https://bafkreidu3r74h4cfukzzwetdesdkrflnbewvrw6brjdfbelsbnirnbpb6i.ipfs.nftstorage.link/";
         case 16:
-            return "";
+            return "https://bafkreicp5hvoublyojehy4pmampedhigqccp2pwlhz4wbggh6yxkegdhq4.ipfs.nftstorage.link/";
         case 17:
-            return "";
+            return "https://bafkreia7lunsfdji3w4j2okqmadoxm7gvgtwh2vusncyg6fe7rrgdhhcjm.ipfs.nftstorage.link/";
         case 18:
-            return "";
+            return "https://bafkreihlvivdsaz7bjjyq2776p574m7px6fee7rx2yjs7hkxuvxejtljva.ipfs.nftstorage.link/";
         case 19:
-            return "";
+            return "https://bafkreig2rqznj35wujdyslulcbef3x3slbpgl5dhucn3tlaryi3syu6zwm.ipfs.nftstorage.link/";
         case 20:
-            return "";
+            return "https://bafkreigtfnihglurnsa74dgxig56aboq4nrc4vjnleqx3dli3jcydv4u6a.ipfs.nftstorage.link/";
     }
 }
 

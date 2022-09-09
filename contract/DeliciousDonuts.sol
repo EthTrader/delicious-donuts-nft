@@ -2,23 +2,21 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract NFT is ERC721Enumerable {
+contract DeliciousDonuts is ERC721Enumerable, Ownable {
     uint256 public tokenCount;
-    address public adminAddress;
     bool public mintComplete;
 
     // Optional mapping for token URIs
     mapping(uint256 => string) private _tokenURIs;
 
-    constructor () ERC721 ("Delicious Donuts", "DONUTNFT") {
+    constructor () ERC721 ("TEST Delicious Donuts", "TESTDONUTNFT") {
         tokenCount = 0;
-        adminAddress = msg.sender;
     }
 
-    function mint(address receiver, string memory tokenURI) public returns (uint256) {
-        require(msg.sender == adminAddress);
-        require(mintComplete == false);
+    function mint(address receiver, string memory tokenURI) onlyOwner public returns (uint256) {
+        require(mintComplete == false, "The bakery is now closed. No more Delicious Donuts can be minted.");
 
         uint256 id = tokenCount;
         _safeMint(receiver, id);
@@ -27,11 +25,9 @@ contract NFT is ERC721Enumerable {
         tokenCount++; 
     }
 
-    function closeMinting(address receiver, string memory tokenURI) public returns (uint256) {
-        require(msg.sender == adminAddress);
-
+    function closeMinting() onlyOwner public {
         mintComplete = true;
-    }    
+    } 
 
     /**
      * @dev See {IERC721Metadata-tokenURI}.

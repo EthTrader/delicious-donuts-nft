@@ -7,7 +7,6 @@ async function mint() {
   let nftMinted = 0;
   let usersMinted = 0;
   let output = [];
-  let reportMetadata = [];
 
   for (user of nftList) {
     // Loop through NFT list and generate metadata for each user
