@@ -11,7 +11,7 @@ contract DeliciousDonuts is ERC721Enumerable, Ownable {
     // Optional mapping for token URIs
     mapping(uint256 => string) private _tokenURIs;
 
-    constructor () ERC721 ("TEST Delicious Donuts", "TESTDONUTNFT") {
+    constructor () ERC721 ("Delicious Donuts", "DONUTNFT") {
         tokenCount = 0;
     }
 
