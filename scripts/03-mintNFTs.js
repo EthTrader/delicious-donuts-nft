@@ -15,7 +15,7 @@ async function mint() {
         let wallet = new ethers.Wallet(privateKey, provider);
 
         // Create contract instance
-        let nftContractAddress = "0x1735c8121788163CD9b49abaf633a66FFea7D145";
+        let nftContractAddress = "0xCca92f52F9BD7d0d853E59Dcb76C12C0A0D443fe";
         let nftContract = new ethers.Contract(nftContractAddress, nftContractABI, wallet);
 
         // Get token URI
