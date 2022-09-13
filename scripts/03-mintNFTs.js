@@ -1,6 +1,7 @@
 const addressDonutList = require("../json/02-output-address-donut-list.json");
 const privateKeyJSON = require("../secrets/privateKey.json");
 const nftContractABI = require("../abi/abi.json");
+const ethers = require("ethers");
 
 async function mint() {
 
@@ -14,7 +15,7 @@ async function mint() {
         let wallet = new ethers.Wallet(privateKey, provider);
 
         // Create contract instance
-        let nftContractAddress = "0xb5C6178AB6288BeaB6FCE80b44786D647E8A7a82";
+        let nftContractAddress = "0x1735c8121788163CD9b49abaf633a66FFea7D145";
         let nftContract = new ethers.Contract(nftContractAddress, nftContractABI, wallet);
 
         // Get token URI
